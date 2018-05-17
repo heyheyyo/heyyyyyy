@@ -1,0 +1,15 @@
+body{
+	background-color: #fafafa;
+	padding-top: 5%;
+}
+
+.login{
+	border: 1px solid #888888;
+	background-color: white;
+	padding: 5%;
+}
+
+.login h3{
+	text-align: center;
+	font-weight: bold;
+}
