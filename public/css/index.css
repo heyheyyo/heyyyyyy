@@ -1,15 +1,63 @@
 body{
-	background-color: #fafafa;
+	background-color: #fafafa !important;
 	padding-top: 5%;
 }
 
+.input-style{
+	margin-bottom: 5%;
+	border-radius: 3px;
+	border: 1px solid #888888;
+	outline: none;
+	height: 35px;
+	background-color: #fafafa;
+	font-size: 10px;
+}
+
+.phonepic{
+	background-image: url(https://www.instagram.com/static/images/homepage/home-phones.png/38825c9d5aa2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: right;
+}
+
+.postpic{
+	width: 60%;
+	padding-top: 80%;
+	position: relative;
+	
+
+}
+.postpic img{
+	width: 100%;
+	height: 100%;	
+	position: absolute;
+	top: 0;
+}
+
+/*login*/
 .login{
 	border: 1px solid #888888;
 	background-color: white;
-	padding: 5%;
+	padding-left: 30px !important;
+	padding-top: 5%;
+	padding-right: 30px !important;
+	padding-bottom: 5%; 
 }
 
 .login h3{
 	text-align: center;
 	font-weight: bold;
+}
+
+.left{
+	float: right;
+}
+
+#login-form .button-style{
+	background-color: #3897f0;
+	color: white;
+	outline: none;
+	border: 1px solid #3897f0;
+	border-radius: 5px;
+	font-size: 14px;	
 }

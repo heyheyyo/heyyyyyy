@@ -9,7 +9,7 @@ var app = express();
 //-----mongoose
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-var connection = mongoose.connect('mongodb://localhost/practice');
+var connection = mongoose.connect('mongodb://localhost/igpractice');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
+// app.use('/users', require('./routes/users'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
