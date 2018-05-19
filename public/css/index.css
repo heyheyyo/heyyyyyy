@@ -1,63 +1,164 @@
-body{
+body {
 	background-color: #fafafa !important;
 	padding-top: 5%;
+	color: black;
 }
 
-.input-style{
+.input-style {
 	margin-bottom: 5%;
 	border-radius: 3px;
-	border: 1px solid #888888;
+	border: 1px solid #e6e6e6;
 	outline: none;
 	height: 35px;
 	background-color: #fafafa;
 	font-size: 10px;
 }
 
-.phonepic{
+.phonepic {
 	background-image: url(https://www.instagram.com/static/images/homepage/home-phones.png/38825c9d5aa2.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	float: right;
 }
 
-.postpic{
+.postpic {
 	width: 60%;
 	padding-top: 80%;
 	position: relative;
-	
 
 }
-.postpic img{
+.postpic img {
 	width: 100%;
 	height: 100%;	
 	position: absolute;
 	top: 0;
 }
 
-/*login*/
-.login{
-	border: 1px solid #888888;
+/*右半部*/
+.login {
+	border: 1px solid #e6e6e6;
 	background-color: white;
 	padding-left: 30px !important;
 	padding-top: 5%;
 	padding-right: 30px !important;
 	padding-bottom: 5%; 
+	margin-bottom: 2%;
 }
 
-.login h3{
+.login h3 {
 	text-align: center;
 	font-weight: bold;
 }
 
-.left{
+.login hr {
+	height: 2px;
+}
+
+.left {
 	float: right;
 }
 
-#login-form .button-style{
+#login-form .button-style {
 	background-color: #3897f0;
 	color: white;
 	outline: none;
 	border: 1px solid #3897f0;
 	border-radius: 5px;
-	font-size: 14px;	
+	font-size: 14px;
+	margin-bottom: 3%;	
+	cursor: pointer;
+}
+
+/*-或-*/
+.line {
+	text-align: center;
+	position: relative;
+    top: -28px;
+}
+
+.line-word {
+	font-size: 14px;
+	font-weight: bold;
+	color: #888888;	
+	background-color: white;
+	padding-left: 5%;
+	padding-right: 5%;
+
+}
+
+/*忘記密碼*/
+.forgot-password {
+	text-align: center;
+}
+
+.forgot-password a {
+	
+	color: #003569;
+	font-size: 12px;
+}
+
+.forgot-password a:hover {
+	text-decoration: none;
+	color: #003569;
+}
+
+
+/*前網註冊*/
+.register {
+	border: 1px solid #e6e6e6;
+	background-color: white;
+	padding-left: 30px !important;
+	padding-top: 5%;
+	padding-right: 30px !important;
+	padding-bottom: 5%;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.register a {
+	color: #003569;
+	font-size: 12px;
+}
+
+.register a:hover {
+	text-decoration: none;
+	color: #003569;
+}
+
+/*下載*/
+.download p{
+	text-align: center;
+	font-size: 14px;
+}
+
+.appstore-logo {
+	width: 45%;
+	padding-top: 15%;
+	position: relative;
+	float: left;
+	margin-right: 5%;
+}
+
+.appstore-logo img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.googleplay-logo {
+	width: 50%;
+	padding-top: 22%;
+	position: relative;
+	float: left;
+	top: -11px;
+}
+
+.googleplay-logo img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+
 }
