@@ -12,14 +12,14 @@ mongoose.Promise = global.Promise;
 var connection = mongoose.connect('mongodb://localhost/igpractice');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')); //frontend
+app.set('view engine', 'ejs');//前端樣版引擎
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); //靜態檔案(css、js)
 
 app.use('/', require('./routes/index'));
 // app.use('/users', require('./routes/users'));

@@ -4,6 +4,10 @@ body {
 	color: black;
 }
 
+.container{
+	max-width: 900px !important;
+}
+
 .input-style {
 	margin-bottom: 5%;
 	border-radius: 3px;
@@ -14,18 +18,29 @@ body {
 	font-size: 10px;
 }
 
-.phonepic {
-	background-image: url(https://www.instagram.com/static/images/homepage/home-phones.png/38825c9d5aa2.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	float: right;
+.phonepic{
+}
+
+.postbk{
+	width: 116%;
+	padding-top: 145%;
+	position: relative;
+	top: -12px;
+}
+
+.postbk img {
+	width: 100%;
+	height: 100%;	
+	position: absolute;
+	top: 0;
 }
 
 .postpic {
-	width: 60%;
-	padding-top: 80%;
+	width: 62%;
+    padding-top: 101%;
 	position: relative;
-
+    top: -525px;
+    left: 160.5px;
 }
 .postpic img {
 	width: 100%;
@@ -43,6 +58,7 @@ body {
 	padding-right: 30px !important;
 	padding-bottom: 5%; 
 	margin-bottom: 2%;
+	margin-left: 20px;
 }
 
 .login h3 {
@@ -114,6 +130,7 @@ body {
 	font-size: 14px;
 	text-align: center;
 	margin-bottom: 5%;
+	margin-left: 20px;
 }
 
 .register a {
@@ -127,6 +144,11 @@ body {
 }
 
 /*下載*/
+
+.download {
+	margin-left: 20px;
+}
+
 .download p{
 	text-align: center;
 	font-size: 14px;
@@ -149,7 +171,7 @@ body {
 
 .googleplay-logo {
 	width: 50%;
-	padding-top: 22%;
+	padding-top: 20%;
 	position: relative;
 	float: left;
 	top: -11px;
@@ -160,5 +182,4 @@ body {
 	height: 100%;
 	position: absolute;
 	top: 0;
-
 }

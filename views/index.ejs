@@ -17,19 +17,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 left">
-                   <div class="col-md-4"></div>
-                   <div class="col-md-8 phonepic">
+                   <!--<div class="col-md-3"></div>-->
+                   <div class="phonepic">
+                        <div class="postbk"><img src="https://www.instagram.com/static/images/homepage/home-phones.png/38825c9d5aa2.png"></div>
                         <div class="postpic">
-                            <img src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/aafd8c6b005d.jpg" alt="">
-                            <img class="_824m9  " src="/static/images/homepage/screenshot2.jpg/2d9d7248af43.jpg" alt="">
-                            <img class="_824m9  _9i1mm" src="/static/images/homepage/screenshot3.jpg/629d23a3c7b2.jpg" alt="">
-                            <img class="_824m9 _4je3h " src="/static/images/homepage/screenshot4.jpg/001bc33056c1.jpg" alt="">
-                            <img class="_824m9  " src="/static/images/homepage/screenshot5.jpg/f5ae123ab1e2.jpg" alt="">
+                            <img class="photo active" src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/aafd8c6b005d.jpg">
+                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot2.jpg/2d9d7248af43.jpg">
+                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot3.jpg/629d23a3c7b2.jpg">
+                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot4.jpg/001bc33056c1.jpg">
+                            <img class="photo" stc="https://www.instagram.com/static/images/homepage/screenshot5.jpg/f5ae123ab1e2.jpg">
                         </div>
                    </div>
                 </div>
                 <div class="col-md-6 right">
-                    <div class="col-md-8 login">
+                    <div class="login">
                         <h3>Instagram</h3>
                         <hr>
                         <form class="col-md-12" id="login-form">
@@ -42,10 +43,10 @@
                         <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                    
                         <div class="forgot-password"><a href="#">忘記密碼？</a></div>
                     </div>                    
-                    <div class="col-md-8 register">
+                    <div class="register">
                         <span>沒有帳號嗎？<a href="#">註冊</a></span>
                     </div>
-                    <div class="col-md-8 download">
+                    <div class="download">
                         <p>下載應用程式。</p>
                         <div class="col-md-12">
                             <div class="appstore-logo">
@@ -64,23 +65,36 @@
                 </div>
             </div>
         </div>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
+       
     </body>
     
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
+    <script>
+        (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0';
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+
+        
+        $(document).ready(function(){
+            $('.postpic').find('.photo').hide();
+            $('.postpic').find('.active').show();
+
+            var imgnum = 0;
+
+            while(imgnum <= 5){
+                console.log("ok");
+                //$('.postpic').find('.photo').hide();                
+                $('.postpic').find('.active').next().addClass('active');
+                //$('.postpic').find('.photo').removeClass('active');
+                $('.postpic').find('.active').show();
+                imgnum = imgnum + 1;            
+            }
+
+            //imgnum = 0;
+        });
+    </script>
 </html>
