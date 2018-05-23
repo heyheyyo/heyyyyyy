@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); //靜態檔案(css、js)
 
 app.use('/', require('./routes/index'));
-// app.use('/users', require('./routes/users'));
+//app.use('/users', require('./routes/users'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

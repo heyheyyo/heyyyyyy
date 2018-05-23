@@ -13,88 +13,49 @@
         <!-- Latest compiled JavaScript -->
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 left">
-                   <!--<div class="col-md-3"></div>-->
-                   <div class="phonepic">
-                        <div class="postbk"><img src="https://www.instagram.com/static/images/homepage/home-phones.png/38825c9d5aa2.png"></div>
-                        <div class="postpic">
-                            <img class="photo active" src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/aafd8c6b005d.jpg">
-                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot2.jpg/2d9d7248af43.jpg">
-                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot3.jpg/629d23a3c7b2.jpg">
-                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot4.jpg/001bc33056c1.jpg">
-                            <img class="photo" stc="https://www.instagram.com/static/images/homepage/screenshot5.jpg/f5ae123ab1e2.jpg">
-                        </div>
-                   </div>
-                </div>
-                <div class="col-md-6 right">
-                    <div class="login">
-                        <h3>Instagram</h3>
-                        <hr>
-                        <form class="col-md-12" id="login-form">
-                            <input type="text" class="col-md-12 input-style" name="username" placeholder="電話號碼、用戶名稱或電子郵件" />
-                            <input type="text" class="col-md-12 input-style" name="password" placeholder="密碼" />
-                            <button type="submit" class="col-md-12 button-style">登入</button>
-                        </form>
-                        <hr>
-                        <div class="line"><span class="line-word">或</span></div>
-                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                    
-                        <div class="forgot-password"><a href="#">忘記密碼？</a></div>
-                    </div>                    
-                    <div class="register">
-                        <span>沒有帳號嗎？<a href="#">註冊</a></span>
+    <nav class="navbar navbar-inverse navbar-fixed-top header">
+        <div class="container-fluid container-adjust">
+             <div class="col-md-12 navbar-fixed-top">
+                <div class="row">
+                    <div class="logo">instagram</div>
+                    <div class="search">
+                        <input class="search-input" type="text" placeholder="搜尋">
+                        <input class="search-input-click" type="text" placeholder="搜尋">
                     </div>
-                    <div class="download">
-                        <p>下載應用程式。</p>
-                        <div class="col-md-12">
-                            <div class="appstore-logo">
-                                <a href="https://itunes.apple.com/app/instagram/id389801252?mt=8">
-                                    <img src="https://s3-ap-northeast-1.amazonaws.com/official-common-image/btn_appstore_new_tw.png">
-                                </a>
-                            </div>
-                            <div class="googleplay-logo">
-                                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
-                                    <img src="https://vignette.wikia.nocookie.net/nekowiz/images/6/63/Google-play-badge.png/revision/latest?cb=20160503123004&path-prefix=zh">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4"></div>
+                    <div class="info"></div>
                 </div>
             </div>
+            <!-- <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul> -->
         </div>
-       
+    </nav>
+    <body>
+        <!-- <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 header navbar-fixed-top">
+                    <div class="logo"><a href="/">instagram<img src="https://www.instagram.com/static/bundles/base/sprite_core.png/19dc690c8ea9.png"></a></div>
+                    <div class="search"></div>
+                    <div class="info"></div>
+                </div>
+            </div>
+        </div> -->
+         <div class="container">
+            <div class="row">
+                <p>123</p>
+                <p>123</p>
+
+            </div>
+        </div>
     </body>
-    
-    <div id="fb-root"></div>
     <script>
-        (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-        
         $(document).ready(function(){
-            $('.postpic').find('.photo').hide();
-            $('.postpic').find('.active').show();
-
-            var imgnum = 0;
-
-            while(imgnum <= 5){
-                console.log("ok");
-                //$('.postpic').find('.photo').hide();                
-                $('.postpic').find('.active').next().addClass('active');
-                //$('.postpic').find('.photo').removeClass('active');
-                $('.postpic').find('.active').show();
-                imgnum = imgnum + 1;            
-            }
-
-            //imgnum = 0;
+            $('body').on('click', '.logo', function(){
+                window.location.href = '/';
+            });
         });
     </script>
 </html>

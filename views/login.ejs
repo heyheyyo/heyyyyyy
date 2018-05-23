@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title><%= title %></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/login.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 left">
+                   <!--<div class="col-md-3"></div>-->
+                   <div class="phonepic">
+                        <div class="postbk"><img src="https://www.instagram.com/static/images/homepage/home-phones.png/38825c9d5aa2.png"></div>
+                        <div class="postpic">
+                            <img class="photo active" src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/aafd8c6b005d.jpg">
+                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot2.jpg/2d9d7248af43.jpg">
+                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot3.jpg/629d23a3c7b2.jpg">
+                            <img class="photo" src="https://www.instagram.com/static/images/homepage/screenshot4.jpg/001bc33056c1.jpg">
+                            <img class="photo" stc="https://www.instagram.com/static/images/homepage/screenshot5.jpg/f5ae123ab1e2.jpg">
+                        </div>
+                   </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="login">
+                        <h3>Instagram</h3>
+                        <hr>
+                        <form class="col-md-12" name="login-form">
+                            <input type="text" class="col-md-12 input-style" name="username" placeholder="電話號碼、用戶名稱或電子郵件" />
+                            <input type="text" class="col-md-12 input-style" name="password" placeholder="密碼" />
+                            <button type="submit" class="col-md-12 button-style">登入</button>
+                        </form>
+                        <hr>
+                        <div class="line"><span class="line-word">或</span></div>
+                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>                    
+                        <div class="forgot-password"><a href="#">忘記密碼？</a></div>
+                    </div>                    
+                    <div class="register">
+                        <span>沒有帳號嗎？<a href="#">註冊</a></span>
+                    </div>
+                    <div class="download">
+                        <p>下載應用程式。</p>
+                        <div class="col-md-12">
+                            <div class="appstore-logo">
+                                <a href="https://itunes.apple.com/app/instagram/id389801252?mt=8">
+                                    <img src="https://s3-ap-northeast-1.amazonaws.com/official-common-image/btn_appstore_new_tw.png">
+                                </a>
+                            </div>
+                            <div class="googleplay-logo">
+                                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                                    <img src="https://vignette.wikia.nocookie.net/nekowiz/images/6/63/Google-play-badge.png/revision/latest?cb=20160503123004&path-prefix=zh">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+       
+    </body>
+    
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+        
+        $(document).ready(function(){
+            $('.postpic').find('.photo').hide();
+            $('.postpic').find('.active').show();
+
+            var imgnum = 0;
+
+            while(imgnum <= 5){
+                console.log("ok");
+                //$('.postpic').find('.photo').hide();                
+                $('.postpic').find('.active').next().addClass('active');
+                //$('.postpic').find('.photo').removeClass('active');
+                $('.postpic').find('.active').show();
+                imgnum = imgnum + 1;            
+            }
+
+            //imgnum = 0;
+
+            $('form[name=login_form]').submit(function(e) {
+                  e.preventDefault();
+                  var data = {
+                      username: $('input[name=login_username]').val(),
+                      password: $('input[name=login_password]').val(),                     
+                  }
+                  
+                 $.post('/login', data, function(rtn, textStatus, xhr) {
+                      if (rtn.status) {
+                          console.log('OK!')
+                      } else {
+                          
+                      }
+                  }, 'json');
+              });
+        });
+    </script>
+</html>

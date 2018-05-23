@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title><%= title %></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <nav class="navbar navbar-inverse fixed-top header">
+        <div class="container-fluid container-adjust">
+             <div class="col-md-12 navbar-fixed-top">
+                <div class="row">
+                    <div class="logo">instagram</div>
+                    <div class="search">
+                        <input class="search-input" type="text" placeholder="搜尋"><div class="search-icon"><span>co</span></div>
+                        <input class="search-input-click" type="text" placeholder="搜尋"><div class="search-icon2"><span>co</span></div><div class="icon-x"><span>co</span></div>
+                    </div>
+                    <div class="info"></div>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <body>
+        
+        <div class="container container-adjust">
+            <div class="row">
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                      
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Modal Heading</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          Modal body..
+                        </div>
+                        
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-12 row detail">
+                    <div class="col-md-4 detail-img"><img src="https://scontent-tpe1-1.cdninstagram.com/vp/2fe0f433d0fc4023194b5cd2c991eca9/5B82C871/t51.2885-19/s150x150/27577298_210815186139540_1997584676574724096_n.jpg"></div>
+                    <div class="col-md-8 detail-info">
+                        <div class="info"><span class="userid">heyheyyooooo</span><button class="edit-profile-btn">編輯個人檔案</button><div class="setting-icon"><span>co</span></div></div>
+                        <div class="info"><span class="post-num">47 則貼文</span><span class="fan">365 位粉絲</span><span class="subscribe">正在追蹤 494 人</span></div>
+                        <div><span class="user-name">陳呸蓉</span><span class="intro">我的介紹介紹介紹</span></div>
+                    </div>
+                </div>
+                <div class="col-md-12 row mypost">                    
+                    <!-- Nav pills -->
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="pill" href="#post">貼文</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="pill" href="#favor">我的珍藏</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content ">
+                        <div id="post" class="container tab-pane active"><br>
+                            <div class="row">
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>    
+                            </div>
+                            
+                        </div>
+                        <div id="favor" class="container tab-pane fade"><br>
+                            <p>只有你可以看到自己的珍藏內容</p>
+                            <div class="row">
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>
+                                <div class="col-md-4 post-img" data-toggle="modal" data-target="#myModal"><img src="/image/post.png"></div>    
+                            </div>                        
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('body').on('click', '.logo', function(){
+                window.location.href = '/';
+            });
+
+            $('.search-input').show();
+            $('.search-icon').show();
+            $('.search-input-click').hide();
+            $('.search-icon2').hide();
+            $('.icon-x').hide();
+            $('body').on('click', '.search-input', function(){
+                $('.search-input').hide();
+                $('.search-icon').hide();
+                $('.search-input-click').show();
+                $('.search-icon2').show();
+                $('.icon-x').show();
+
+            });
+
+            $('.icon-x').click(function(){
+                $('.search-input').show();
+                $('.search-icon').show();
+                $('.search-input-click').hide();
+                $('.search-icon2').hide();
+                $('.icon-x').hide();  
+            });
+
+            $('body').on('click', '.post-img', function(){
+
+            });
+        });
+    </script>
+</html>
